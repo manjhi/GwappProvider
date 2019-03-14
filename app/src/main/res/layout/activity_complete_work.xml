@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".activities.CompleteWorkActivity">
+
+    <include android:id="@+id/appBar"
+        layout="@layout/custom_appbar"/>
+
+    <TextView
+        android:id="@+id/cong"
+        android:layout_below="@id/appBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Congratulations!"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/paymentText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your payment has been confirmed by visa card and will get it soon in your account"
+        android:layout_below="@id/cong"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_20"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"/>
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/userReview"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_below="@id/paymentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sp_20"
+        android:text="Review User"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold" />
+    <RelativeLayout
+        android:id="@+id/type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="@dimen/sp_16"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/dp_26"
+            android:layout_marginTop="@dimen/dp_8"
+            android:textColor="#f72424"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bad"/>
+
+        <TextView
+            android:textSize="@dimen/sp_16"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp_26"
+            android:layout_marginTop="@dimen/dp_8"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Great"/>
+    </RelativeLayout>
+    <com.warkiz.widget.IndicatorSeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sp_20"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/sp_20"
+        app:isb_max="10"
+        app:isb_only_thumb_draggable="true"
+        app:isb_progress="2"
+        app:isb_seek_smoothly="true"
+        app:isb_show_tick_marks_type="oval"
+        app:isb_thumb_color="@color/colorPrimary"
+        app:isb_thumb_size="20dp"
+        app:isb_tick_marks_drawable="@drawable/round_appcolor"
+        app:isb_tick_marks_size="16dp"
+        app:isb_tick_texts_size="@dimen/sp_16"
+        app:isb_ticks_count="5"
+        app:isb_track_background_size="4dp"
+        app:isb_track_progress_color="@color/colorPrimary"
+        app:isb_track_progress_size="6dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@drawable/bid_et_bg"
+            android:gravity="top"
+            android:hint="Add comment"
+            android:padding="@dimen/dp_10"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="70dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/button_bg"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+</RelativeLayout>

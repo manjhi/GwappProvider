@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/mainLayout"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/dateData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="May 05,2018"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/timeData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_toEndOf="@id/dateData"
+        android:text="02:59 pm"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Replace toilet seat cover"
+        android:layout_below="@id/timeData"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_2"
+        android:textColor="@color/black"/>
+    <TextView
+        android:textColor="@color/black"
+        android:layout_below="@id/category"
+        android:id="@+id/address"
+        android:layout_marginStart="@dimen/dp_20"
+        android:drawableStart="@drawable/ic_location_pointer"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Street no 911-108 Near Abc town AAA"/>
+    <ImageView
+        android:id="@+id/notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_notification"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_10"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_below="@id/address"/>
+</RelativeLayout>

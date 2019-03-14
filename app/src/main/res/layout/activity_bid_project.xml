@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_image"
+    tools:context=".activities.BidProjectActivity">
+
+    <include android:id="@+id/bar"
+        layout="@layout/custom_appbar"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/dp_7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_10"
+                    android:weightSum="2.8">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_17"
+                            android:text="Bid"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_7">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_17"
+                                android:singleLine="true"
+                                android:text="Your Bid"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_17"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="@dimen/dp_5"
+                                android:singleLine="true"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_30">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_17"
+                                android:singleLine="true"
+                                android:text="Avg. bid"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_17"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="@dimen/dp_5"
+                                android:singleLine="true"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_22">
+
+                            <TextView
+                                android:id="@+id/textDollar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_22"
+                                android:background="@drawable/dollar_bg"
+                                android:gravity="center"
+                                android:paddingStart="@dimen/dp_7"
+                                android:paddingEnd="@dimen/dp_7"
+                                android:singleLine="true"
+                                android:text="$"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <EditText
+                                android:id="@+id/amountEt"
+                                android:layout_width="50dp"
+                                android:layout_height="@dimen/dp_22"
+                                android:layout_toEndOf="@id/textDollar"
+                                android:background="@drawable/bid_amount_bg"
+                                android:hint="500"
+                                android:paddingStart="@dimen/dp_5"
+                                android:paddingEnd="@dimen/dp_5"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_22"
+                                android:layout_toEndOf="@id/amountEt"
+                                android:background="@drawable/usd_bg"
+                                android:gravity="center"
+                                android:paddingStart="@dimen/dp_5"
+                                android:paddingEnd="@dimen/dp_5"
+                                android:singleLine="true"
+                                android:text="USD"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:visibility="invisible"
+                                android:id="@+id/dollarUSAmount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/textDollar"
+                                android:layout_marginStart="@dimen/dp_5"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:singleLine="true"
+                                android:text="$55.60 USD"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/dollarUSAmount"
+                                android:layout_marginStart="@dimen/dp_5"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:singleLine="true"
+                                android:text="$555.60 USD"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_17"
+                            android:text="Deliver in :"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_5">
+
+                            <EditText
+                                android:id="@+id/deliverAmountEt"
+                                android:layout_width="40dp"
+                                android:layout_height="@dimen/dp_22"
+                                android:background="@drawable/deliver_in_amount"
+                                android:hint="12"
+                                android:paddingStart="@dimen/dp_5"
+                                android:paddingEnd="@dimen/dp_5"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_22"
+                                android:layout_toEndOf="@id/deliverAmountEt"
+                                android:background="@drawable/usd_bg"
+                                android:gravity="center"
+                                android:paddingStart="@dimen/dp_5"
+                                android:paddingEnd="@dimen/dp_5"
+                                android:singleLine="true"
+                                android:text="Days"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="Describe your proposal"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:text="Your proposal is your chance to make a good first impression with the employer! Make is count!"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:background="@drawable/bid_et_bg"
+                android:gravity="top"
+                android:hint="What makes you the best candidate for this project?"
+                android:padding="@dimen/dp_10"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:text="1500 character left"
+                android:textColor="#92000000"
+                android:textSize="12sp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/dp_7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_17"
+                        android:text="Proposed Milestones"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_17"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:text="Define the task that you will complete for this employer's project."
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="1."
+                            android:textSize="14sp" />
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:layout_marginTop="@dimen/spacing35"
+                            android:layout_marginBottom="@dimen/spacing35"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="3dp">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="@color/white"
+                                android:hint="Project Milestone"
+                                android:paddingStart="@dimen/dp_10"
+                                android:paddingEnd="@dimen/dp_10"
+                                android:textSize="12sp" />
+
+                        </android.support.v7.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:layout_marginEnd="@dimen/dp_5"
+                            android:text="For"
+                            android:textSize="12sp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/dp_5">
+
+                            <TextView
+                                android:id="@+id/textProposalDollar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_22"
+                                android:background="@drawable/dollar_bg"
+                                android:gravity="center"
+                                android:paddingStart="@dimen/dp_7"
+                                android:paddingEnd="@dimen/dp_7"
+                                android:singleLine="true"
+                                android:text="$"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <EditText
+                                android:id="@+id/amountProposalEt"
+                                android:layout_width="50dp"
+                                android:layout_height="@dimen/dp_22"
+                                android:layout_toEndOf="@id/textProposalDollar"
+                                android:background="@drawable/proposal_amout_et_bg"
+                                android:hint="500"
+                                android:paddingStart="@dimen/dp_5"
+                                android:paddingEnd="@dimen/dp_5"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_plus_small"
+                            android:drawablePadding="@dimen/dp_5"
+                            android:padding="@dimen/dp_5"
+                            android:text="Add a Milestone"
+                            android:textColor="#70bd4d"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:padding="@dimen/dp_5"
+                            android:text="Milestone Total: $500 USD"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/place_bid"
+                android:layout_width="@dimen/dp_200"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_bg"
+                android:drawableStart="@drawable/ic_bid"
+                android:paddingStart="@dimen/dp_40"
+                android:paddingEnd="@dimen/dp_40"
+                android:text="PLACE BID"
+                android:layout_marginBottom="@dimen/dp_30"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

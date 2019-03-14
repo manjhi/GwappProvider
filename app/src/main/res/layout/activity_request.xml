@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".activities.RequestActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/custom_appbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBar"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:visibility="gone"
+                android:id="@+id/userImage"
+                android:src="@drawable/provider_image"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="@dimen/dp_1"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100" />
+
+
+            <ImageView
+                android:id="@+id/loader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:src="@drawable/ic_loading" />
+
+            <LinearLayout
+                android:id="@+id/seconds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/simpleChronometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="00"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/spacing35"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="Seconds left"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp_2"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/requestUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="Mangesh Sharma"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dp_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/requestUserService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="Toilet Seat Replace"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment :-"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/dp_16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/requestUserPaymentMethod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_4"
+                    android:text="Cash"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:text="Reject may cost you $20"
+                android:textColor="@color/red"
+                android:textSize="@dimen/dp_16"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.6"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp_2"
+                android:background="@color/gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="Address"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dp_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/userAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_4"
+                android:maxLines="1"
+                android:text="Address"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="Problem Details"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dp_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/requestUserProblemDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:maxLength="250"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/rejectButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_8"
+                    android:layout_weight="1"
+                    android:background="@drawable/reject_bg"
+                    android:text="Reject"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/selector_button" />
+
+                <Button
+                    android:id="@+id/acceptButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_8"
+                    android:layout_weight="1"
+                    android:background="@drawable/accept_button"
+                    android:text="Accept"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/selector_button" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bidCounter"
+                android:layout_width="@dimen/dp_180"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_8"
+                android:background="@drawable/accept_button"
+                android:text="Counter Bid"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_button" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

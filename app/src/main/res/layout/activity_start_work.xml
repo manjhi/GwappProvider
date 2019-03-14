@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.StartWorkActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/custom_appbar" />
+
+    <LinearLayout
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBar"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="Your Quotation Has Been Approved"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dp_16"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/head"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="Your payment has been processed."
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/subhead"
+                android:layout_marginTop="@dimen/dp_8">
+
+                <ImageView
+                    android:id="@+id/provider_Img"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_100"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:src="@drawable/provider_image" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_2"
+                    android:layout_toEndOf="@id/provider_Img">
+
+                    <ImageView
+                        android:id="@+id/help"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:src="@drawable/ic_help" />
+
+                    <LinearLayout
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mangesh Sharma"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/dp_16" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/name"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Work Details:- "
+                            android:textColor="@color/colorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Toilet Seat Replace"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dateData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/detail"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date:- "
+                            android:textColor="@color/colorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30/04/2018"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/timeData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dateData"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time:- "
+                            android:textColor="@color/colorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="04:00PM"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/charges"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/timeData"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Charges:- "
+                            android:textColor="@color/colorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$"
+                            android:textColor="@color/colorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_22"
+                            android:layout_marginStart="@dimen/dp_4"
+                            android:background="@drawable/payment_bg"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/dp_10"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:singleLine="true"
+                            android:text="200"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <View
+                android:id="@+id/viewOne"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/gray" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/viewOne">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:id="@+id/startWork"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:text="Upload your work photo"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_160"
+                            android:layout_marginStart="38dp"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:layout_marginEnd="38dp"
+                            android:background="@drawable/edit_back_ring_shape"
+                            android:drawablePadding="@dimen/dp_10">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/dp_4" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_plus1" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:drawableTop="@drawable/ic_good_luck"
+                            android:text="Good Luck"
+                            android:drawablePadding="@dimen/dp_10"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/dp_18"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/startWorkButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:layout_marginBottom="@dimen/dp_30"
+                            android:background="@drawable/button_bg"
+                            android:paddingStart="@dimen/dp_50"
+                            android:paddingEnd="@dimen/dp_50"
+                            android:text="Start Work"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/doneWork"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:drawableTop="@drawable/ic_smily"
+                            android:text="Done Work"
+                            android:drawablePadding="@dimen/dp_10"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/dp_18"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:text="Upload your work photo"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_160"
+                            android:layout_marginStart="38dp"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:layout_marginEnd="38dp"
+                            android:background="@drawable/edit_back_ring_shape"
+                            android:drawablePadding="@dimen/dp_10">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/dp_4" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_plus1" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/doneWorkButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:layout_marginBottom="@dimen/dp_30"
+                            android:background="@drawable/button_bg"
+                            android:paddingStart="@dimen/dp_50"
+                            android:paddingEnd="@dimen/dp_50"
+                            android:text="Rating"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

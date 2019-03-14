@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "635182380947",
+    "firebase_url": "https://gwappprovider-2.firebaseio.com",
+    "project_id": "gwappprovider-2",
+    "storage_bucket": "gwappprovider-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635182380947:android:f96ecdce9866eafb",
+        "android_client_info": {
+          "package_name": "com.omninos.gwappprovider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "635182380947-t2lllrvi4albpf67jjcild4i4deeq11e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.omninos.gwappprovider",
+            "certificate_hash": "1f3138cbe862b55a99223831f8b47a40f78c1154"
+          }
+        },
+        {
+          "client_id": "635182380947-kuuahmn4o2j6qlekh6es1t4f60arqfkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXC2GM7jLd45y7-yIg9j4r0mWdFYN2eBg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "635182380947-kuuahmn4o2j6qlekh6es1t4f60arqfkf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

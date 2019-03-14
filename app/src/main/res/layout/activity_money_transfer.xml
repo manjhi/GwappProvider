@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".activities.MoneyTransferActivity">
+
+    <include android:id="@+id/appBar"
+        layout="@layout/custom_appbar"/>
+
+
+    <TextView
+        android:id="@+id/tastPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay Per Task"
+        android:layout_below="@id/appBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_60"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_25"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Your Balance"
+        android:layout_below="@id/tastPay"
+        android:layout_marginTop="@dimen/sp_30"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"/>
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_below="@id/balance"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/sp_30"
+        android:text="$60"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/transfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_70"
+        android:layout_marginStart="70dp"
+        android:layout_below="@id/amount"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/accept_button"
+        android:text="Transfer my Account"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/dp_40"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/transfer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="@dimen/dp_70"
+        android:layout_marginStart="70dp"
+        android:background="@drawable/reject_bg"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/dp_30"/>
+</RelativeLayout>

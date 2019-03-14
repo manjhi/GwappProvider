@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".activities.ServicesListActivity">
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="You can Fix"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_20" />
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_above="@id/next"-->
+        <!--android:layout_below="@id/head"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/main"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/dp_30"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="2">-->
+
+                <!--<android.support.v7.widget.CardView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_margin="@dimen/dp_4"-->
+                    <!--android:layout_weight="1"-->
+                    <!--app:cardCornerRadius="@dimen/dp_8"-->
+                    <!--app:cardElevation="@dimen/dp_2"-->
+                    <!--app:cardUseCompatPadding="true">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/construction"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<ImageView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginTop="@dimen/dp_8"-->
+                            <!--android:src="@drawable/construction" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_marginTop="@dimen/dp_4"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginBottom="@dimen/dp_6"-->
+                            <!--android:text="Construction Services"-->
+                            <!--android:textAlignment="center"-->
+                            <!--android:textColor="@color/black"-->
+                            <!--android:textSize="@dimen/sp_20" />-->
+                    <!--</LinearLayout>-->
+                <!--</android.support.v7.widget.CardView>-->
+
+                <!--<android.support.v7.widget.CardView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_margin="@dimen/dp_4"-->
+                    <!--android:layout_weight="1"-->
+                    <!--app:cardCornerRadius="@dimen/dp_8"-->
+                    <!--app:cardElevation="@dimen/dp_2"-->
+                    <!--app:cardUseCompatPadding="true">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/maintenance"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<ImageView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginTop="@dimen/dp_8"-->
+                            <!--android:src="@drawable/maintenace_services" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_marginTop="@dimen/dp_4"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginBottom="@dimen/dp_6"-->
+                            <!--android:text="Maintenance Services"-->
+                            <!--android:textAlignment="center"-->
+                            <!--android:textColor="@color/black"-->
+                            <!--android:textSize="@dimen/sp_20" />-->
+                    <!--</LinearLayout>-->
+                <!--</android.support.v7.widget.CardView>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<android.support.v7.widget.CardView-->
+                <!--android:layout_width="@dimen/dp_180"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_margin="@dimen/dp_4"-->
+                <!--app:cardCornerRadius="@dimen/dp_8"-->
+                <!--app:cardElevation="@dimen/dp_2"-->
+                <!--app:cardUseCompatPadding="true">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/food"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_marginTop="@dimen/dp_8"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/food" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginBottom="@dimen/dp_6"-->
+                        <!--android:text="Food"-->
+                        <!--android:layout_marginTop="@dimen/dp_4"-->
+                        <!--android:textAlignment="center"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:textSize="@dimen/sp_20" />-->
+                <!--</LinearLayout>-->
+            <!--</android.support.v7.widget.CardView>-->
+
+        <!--</LinearLayout>-->
+
+    <!--</RelativeLayout>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:layout_above="@id/next"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:layout_below="@id/head"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dp_70"
+        android:layout_marginEnd="@dimen/dp_70"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:background="@drawable/button_bg"
+        android:text="Next"
+        android:textColor="@color/white" />
+</RelativeLayout>

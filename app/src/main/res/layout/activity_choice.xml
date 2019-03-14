@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ChoiceActivity">
+
+
+    <LinearLayout
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_60"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="@dimen/dp_60"
+            android:layout_marginBottom="15dp"
+            android:contentDescription="@null"
+            android:src="@drawable/color_logo" />
+    </LinearLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/first">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="40dp"
+                android:text="Types"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/userEmail"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginEnd="38dp"
+                android:background="@drawable/edit_back_ring_shape"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp_12" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="8dp"
+                android:text="Drivers licence"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_160"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginEnd="38dp"
+                android:background="@drawable/edit_back_ring_shape"
+                android:drawablePadding="@dimen/dp_10">
+                <ImageView
+                    android:id="@+id/licenceImage"
+                    android:layout_margin="@dimen/dp_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/addImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_plus1"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="8dp"
+                android:text="Insurance"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_160"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginEnd="38dp"
+                android:background="@drawable/edit_back_ring_shape"
+                android:drawablePadding="@dimen/dp_10">
+                <ImageView
+                    android:id="@+id/insuranceImage"
+                    android:layout_margin="@dimen/dp_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/addInsurance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_plus1"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="8dp"
+                android:text="Work Qualifications"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginEnd="38dp"
+                android:background="@drawable/edit_back_ring_shape"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp_12" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="8dp"
+                android:text="Per hour $ charges"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/perHourChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginEnd="38dp"
+                android:background="@drawable/edit_back_ring_shape"
+                android:drawablePadding="@dimen/dp_10"
+                android:hint="100"
+                android:inputType="number"
+                android:padding="@dimen/dp_12" />
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginBottom="@dimen/dp_40"
+                android:background="@drawable/button_bg"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>
