@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">Gwapp Provider</string>
-    <string name="key">AIzaSyDELpqMi27VwVMB44JliiQG3wSDAYEuG_c</string>
+    <string name="key">Enter Your Key</string>
 
 
     <string name="open">open</string>
     <string name="close">close</string>
 
-    <string name="facebook_app_id">345094169683921</string>
-    <string name="fb_login_protocol_scheme">fb345094169683921</string>
+    <string name="facebook_app_id">FBID</string>
+    <string name="fb_login_protocol_scheme">FBProtocole</string>
 
 </resources>
